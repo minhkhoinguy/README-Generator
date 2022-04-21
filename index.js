@@ -1,9 +1,7 @@
-// import inquirer
 const inquirer = require("inquirer");
 const fs = require("fs");
 console.log("Welcome to my README Generator!")
 console.log("Please answer the following questions to generate a professional README for your project.")
-//ask the the questions
 inquirer.prompt([
     {
         type:"input",
@@ -65,9 +63,9 @@ inquirer.prompt([
   ]).then(function({title,desscription,installation,usage,credit,features,contribute,license,test,github,email}) {
     let generateReadme = `
 ## Badge
-![license](https://img.shields.io/badge/${license}-100%25-brightgreen)
+![license](https://img.shields.io/badge/${license}-MKN-brightgreen)
 ## Title
-    ${title}
+${title}
 ## Table of Contents
 - [Desscription](#desscription)
 - [Installation](#installation)
@@ -76,39 +74,39 @@ inquirer.prompt([
 - [Features](#features)
 - [Contribute](#contribute)
 - [License](#license)
-- [Testing](#test)
+- [Testing](#testing)
 - [Question](#question)
 - [Badge](#badge)
 ## Desscription
-    ${desscription}
+${desscription}
 
 ## Installation
-    ${installation}
+${installation}
 
 ## Usage
-    ${usage}
+${usage}
 
 ## Credit
-    ${credit}
+${credit}
 
 ## Features
-    ${features}
+${features}
 
 ## Contribute
-    ${contribute}
+${contribute}
 
 ## License
-    ${license}
+${license}
 
 ## Testig
-    ${test}
+${test}
 
 ## Question
-    Contact me with the link below if you have any questions!
+Contact me with the link below if you have any questions!
 
-    Github: https://github.com/${github}
+[Github](https://github.com/${github})
 
-    Mail to: ${email}
+[Email](mailto:${email})
 
 `
     console.log(generateReadme);
